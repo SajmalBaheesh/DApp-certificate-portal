@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Certificate DApp</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+    <script src="./scripts/app.js"></script>
+  </head>
+
+  <body>
+    <nav
+      class="navbar is-link title is-4"
+      role="navigation"
+      aria-label="main navigation"
+    >
+      <div class="navbar-brand">
+        <a class="navbar-item" href="/">
+          <img src="./public/certificate.svg" />
+          <span class="ml-2"> Certificate DApp </span>
+        </a>
+      </div>
+      <dev>
+        <button class="button is-success is-large" onclick="connectToMetaMask()">Login</button>
+      </dev>
+      <div class="navbar-end">
+        <a class="navbar-item mx-2" href="./issueCertificate.html">
+          Issue Certificate
+        </a>
+      </div>
+    </nav>
+    <section class="section">
+      <div class="container has-text-centered">
+        <img src="./public/certificate.svg" width="256" />
+        <h3 class="title is-4">Search Certificate Details</h3>
+        <div class="field is-grouped mt-6">
+          <input
+            class="input is-large mr-4"
+            type="text"
+            id="certificateID"
+            name="certificateID"
+            placeholder="Enter Certificate ID"
+          />
+          <div class="control">
+            <button
+              class="button is-link is-large"
+              onclick="getCertificateDetails()"
+            >
+              Submit
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

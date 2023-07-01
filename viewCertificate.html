@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Certificate DApp</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+    <script>
+      window.onload = () => {
+        document.getElementById("certificateID").innerHTML =
+          "Certificate ID: " + sessionStorage.getItem("certificateID");
+        document.getElementById("candidateName").innerHTML =
+          sessionStorage.getItem("candidateName");
+        document.getElementById("courseName").innerHTML =
+          sessionStorage.getItem("courseName");
+        document.getElementById("grade").innerHTML =
+          sessionStorage.getItem("grade") + " Grade.";
+        document.getElementById("date").innerHTML =
+          "Date: " + sessionStorage.getItem("date");
+      };
+    </script>
+  </head>
+
+  <body>
+    <nav
+      class="navbar is-link title is-4"
+      role="navigation"
+      aria-label="main navigation"
+    >
+      <div class="navbar-brand">
+        <a class="navbar-item" href="/">
+          <img src="/public/certificate.svg" />
+          <span class="ml-2"> Certificate DApp </span>
+        </a>
+      </div>
+      <div class="navbar-end">
+        <a class="navbar-item mx-2" href="/issueCertificate.html">
+          Issue Certificate
+        </a>
+      </div>
+    </nav>
+    <section class="section">
+      <div class="container has-text-centered">
+        <div class="columns">
+          <div class="column is-half is-offset-one-quarter">
+            <div class="card">
+              <div class="card-content">
+                <div class="content">
+                  <p class="title is-2 my-6">KERALA BLOCKCHAIN ACADEMY</p>
+                  <p class="subtitle my-2">This is to certify that</p>
+                  <p class="title my-4" id="candidateName">{{name}}</p>
+                  <p class="subtitle my-2">has successfully completed</p>
+                  <p class="title is-4 my-4" id="courseName">{{course}}</p>
+                  <p class="subtitle my-2">with</p>
+                  <p class="title is-4 my-4" id="grade">{{grade}} Grade</p>
+                  <div class="columns mt-6 mb-4">
+                    <div class="column ml-5">
+                      <p class="subtitle has-text-left">
+                        <span id="certificateID">Certificate ID: {{id}}</span>
+                        <br />
+                        <span id="date">Date: {{date}}</span>
+                        <br />
+                        Place: Thiruvananthapuram
+                      </p>
+                    </div>
+                    <div class="column mr-5">
+                      <p class="subtitle has-text-right">
+                        (sd/-)
+                        <br />
+                        Director
+                        <br />
+                        KBA
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
